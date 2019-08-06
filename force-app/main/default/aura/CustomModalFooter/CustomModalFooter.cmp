@@ -1,0 +1,6 @@
+<aura:component>
+        <lightning:overlayLibrary aura:id="overlayLib"/>
+
+    <lightning:button label="キャンセル" onclick="{!c.onCancelClicked}" />
+    <lightning:button label="保存" variant="brand" onclick="{!c.onSaveClicked}" />
+</aura:component>

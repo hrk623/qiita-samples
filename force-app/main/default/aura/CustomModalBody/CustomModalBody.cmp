@@ -1,0 +1,15 @@
+<aura:component access="global">
+  <!-- Public Attributes -->
+  <aura:attribute access="public" type="String" name="lastName" />
+  <aura:attribute access="public" type="String" name="firstName" />
+  <aura:attribute access="public" type="String" name="email" />
+
+  <!-- Private Attributes -->
+
+  <!-- User Interface -->
+  <div>
+    <lightning:input type="text" label="姓" value="{!v.lastName}" />
+    <lightning:input type="text" label="名" value="{!v.firstName}" />
+    <lightning:input type="email" label="メール" value="{!v.email}" />
+  </div>
+</aura:component>

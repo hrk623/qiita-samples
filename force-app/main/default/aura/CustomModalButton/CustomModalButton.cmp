@@ -1,0 +1,9 @@
+<aura:component access="global" implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes">
+  <!-- Overlay Library -->
+  <lightning:overlayLibrary aura:id="overlayLib" />
+
+  <!-- User Interface -->
+  <div>
+    <lightning:button variant="brand" label="モーダルを開く" onclick="{! c.onButtonClick }" />
+  </div>
+</aura:component>
