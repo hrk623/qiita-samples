@@ -1,7 +1,14 @@
 {
     "compilerOptions": {
         "baseUrl": ".",
-        "paths": {},
+        "paths": {
+            "c/myModalButton": [
+                "myModalButton/myModalButton.js"
+            ],
+            "c/myModalContainer": [
+                "myModalContainer/myModalContainer.js"
+            ]
+        },
         "experimentalDecorators": true
     },
     "include": [

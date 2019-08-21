@@ -1,15 +1,21 @@
-<aura:component access="global">
+<aura:component>
   <!-- Public Attributes -->
   <aura:attribute access="public" type="String" name="lastName" />
   <aura:attribute access="public" type="String" name="firstName" />
   <aura:attribute access="public" type="String" name="email" />
 
-  <!-- Private Attributes -->
+  <!-- Event Handlers -->
+  <aura:handler event="c:CustomModalEvent" action="{!c.onCustomModalEvent}" />
+
+  <!-- Overlay Library -->
+  <lightning:overlayLibrary aura:id="overlayLib" />
 
   <!-- User Interface -->
   <div>
     <lightning:input type="text" label="姓" value="{!v.lastName}" />
     <lightning:input type="text" label="名" value="{!v.firstName}" />
     <lightning:input type="email" label="メール" value="{!v.email}" />
+
+    <lightning:spinner aura:id="spinner" class="slds-hide" variant="brand" size="large" />
   </div>
 </aura:component>

@@ -1,0 +1,16 @@
+<template>
+    <lightning-button variant="brand" label="モーダルを開く" onclick={onOpenModalClicked}></lightning-button>
+
+    <c-my-modal-container>
+        <span slot="header">顧客情報の編集</span>
+        <span>
+            <lightning-input type="text" label="姓" value={lastName}></lightning-input>
+            <lightning-input type="text" label="名" value={firstName}></lightning-input>
+            <lightning-input type="email" label="メール" value={email}></lightning-input>
+        </span>
+        <span slot="footer">
+            <lightning-button label="キャンセル" onclick={onCancelClicked}></lightning-button>
+            <lightning-button variant="brand" label="保存" onclick={onSaveClicked} class="slds-m-left_x-small"></lightning-button>
+        </span>
+    </c-my-modal-container>
+</template>

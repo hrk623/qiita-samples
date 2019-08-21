@@ -1,6 +1,16 @@
 <aura:component>
-        <lightning:overlayLibrary aura:id="overlayLib"/>
+  <!-- Private Attributes -->
+  <aura:attribute access="private" type="Boolean" name="isDisabled" default="false" />
 
-    <lightning:button label="キャンセル" onclick="{!c.onCancelClicked}" />
-    <lightning:button label="保存" variant="brand" onclick="{!c.onSaveClicked}" />
+  <!-- Registered Events -->
+  <aura:registerEvent type="c:CustomModalEvent" name="customModalEvent" />
+
+  <!-- Overlay Library -->
+  <lightning:overlayLibrary aura:id="overlayLib" />
+
+  <!-- User Interface -->
+  <div>
+    <lightning:button label="キャンセル" onclick="{!c.onCancelClicked}" disabled="{!v.isDisabled}" />
+    <lightning:button label="保存" variant="brand" onclick="{!c.onSaveClicked}" disabled="{!v.isDisabled}" />
+  </div>
 </aura:component>
